@@ -1,0 +1,38 @@
+body{
+	padding: 50px;
+}
+.box { 
+	background: orange; 
+	height: 100px; 
+	line-height: 100px; 
+	text-align: center; 
+	color: #fff; 
+	font-size: 3em; 
+	margin: 5px 15px 5px 0;
+} 
+.box:nth-child(even){ 
+	background: green; 
+} 
+.wrapper { 
+	width: 560px; 
+	border: 1px solid orange; 
+	padding: 15px; 
+	margin: 20px auto; 
+
+	display: grid; 
+	grid-template-columns: repeat(5, 115px); 
+	grid-template-rows: auto;
+	/*grid-auto-flow: column;*/ /*申明网格，以行或列自动排列*/
+}
+
+/*显示规定两个盒位置，其他盒也会自动补空缺，以及在之后补上。*/
+.b { 
+	grid-column: 3 / 6; 
+	grid-row: 2 / 3; 
+	outline: 2px solid red; 
+} 
+.f { 
+	grid-area: 3 / 1 / 4 / 6; 
+	background-color: #f36; 
+	outline: 2px solid red; 
+}

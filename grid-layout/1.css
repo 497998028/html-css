@@ -1,0 +1,67 @@
+body{
+	padding: 50px;
+}
+
+/*定义网格容器*/
+.wrap{
+	display: grid;
+	grid-template-columns: 100px 10px 100px 10px 100px 10px 100px;
+	grid-template-rows: auto 10px auto 10px auto;
+}
+
+.box{
+	background-color: #444;
+	color: #fff;
+	font-size: 150%;
+	padding: 20px;
+	text-align: center;
+}
+
+/*.b, .d, .g, .i{
+	background-color: red;
+}*/
+
+/*a 与 f 位置实现了交换，交换网格线设置就好了。*/
+.a{
+	grid-column-start: 3;
+	grid-column-end: 4; 
+	grid-row-start: 3;
+	grid-row-end: 4;
+	background-color: red;
+}
+
+/*网格线，简写模式；把开始和结束合并，用 斜杠 / 分割*/
+.b {
+	grid-column: 3/4;
+	grid-row: 1/2;
+}
+
+/*网格区域，更进一步简写模式*/
+.c { 
+	grid-area: 1/5/2/6;
+}
+.d { 
+	grid-area: 1/7/2/8;
+}
+.e { 
+	grid-area: 3/1/4/2;
+}
+.f { 
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	background-color: orange;
+}
+.g {
+	grid-area: 3/5/4/6;
+}
+.h {
+	grid-area: 3/7/4/8;
+}
+.i {
+	grid-area: 5/1/6/2;
+}
+.j {
+	grid-area: 5/3/6/4;
+}
